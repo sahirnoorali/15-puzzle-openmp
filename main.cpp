@@ -44,39 +44,38 @@ class Node{
 // Class functions:
 //*****************************************************************************************
      Node(){
-		parent = NULL;
-	    optr = "";
-		id++;
+		 parent = NULL;
+		 optr = "";
+		 id++;
      }//close ctor
 //*****************************************************************************************
     Node(int board[]){
-        optr = "";
-        parent = NULL;
-        
-        for(int i=0;i<16;i++)
-	  		this->puzzle[i] = board[i];
+		optr = "";
+		parent = NULL;
+
+		for(int i=0;i<16;i++)
+			this->puzzle[i] = board[i];
 		id++;
     }//close ctor
 //*****************************************************************************************
      Node(Node *temp){
-       this->parent = temp->parent;
-       optr = temp->optr;
-      
-       for(int i=0;i<16;i++)
-	    	this->puzzle[i] = temp->puzzle[i];
-       id++;
+		 this->parent = temp->parent;
+		 optr = temp->optr;
+
+		 for(int i=0;i<16;i++)
+			this->puzzle[i] = temp->puzzle[i];
+		 id++;
     }//close copy ctor
 //*****************************************************************************************
     string ToString(){
 		string retStr="";
-		
 		for(int i=0;i<16;i++){
 			stringstream ss;
 			ss << puzzle[i];
 			string str = ss.str();
-		       retStr = retStr + str;	
-		}//close for
-      return retStr;
+			retStr = retStr + str;	
+		}//close for	
+		return retStr;
     }//close ToString
 //*****************************************************************************************
 };//close class
@@ -92,9 +91,9 @@ void Print(int puzzle[], int num){
 	cout<<endl;
 
 	for(int i=0;i<16;i++){
-	   cout<<puzzle[i]<<" ";
-	   if((i+1)%4 == 0)
-	      cout<<endl;   
+    	cout<<puzzle[i]<<" ";
+    	if((i+1)%4 == 0)
+			cout<<endl;   
 	}//close for
 }//close Print
 //*****************************************************************************************
@@ -103,14 +102,14 @@ void SolPath(Node *head){
     Node *p = head;
     
 	if(p==NULL)
-      return;
+    	return;
 	  
     int i = 0;
     
 	while(p!=NULL){
-      Print(p->puzzle,i);
-      p = p->parent;
-      i++;
+		Print(p->puzzle,i);
+		p = p->parent;
+		i++;
     }//close while
     
 	cout<<endl;
@@ -240,7 +239,7 @@ int main() {
 						 	//Create a new board and copy the config
 							int board[16];
 							for(int j=0;j<16;j++)
-							   board[j] = current->puzzle[j];
+								board[j] = current->puzzle[j];
 							   
 							//Fetch the blank index
 							int blankIndex = SearchBlank(board);
