@@ -231,7 +231,7 @@ int main() {
 					nodesExplored++;
 
 					//Loop operator times:
-			       	for(int i=0;i<4 && flag;i++){
+			       		for(int i=0;i<4 && flag;i++){
 						
 						 //Validate if the current operator applied is valid
 						 if(validate(current->puzzle,optrs[i]) == true){
@@ -285,10 +285,10 @@ int main() {
 									//Exit the main loop
 									flag = false;
 									
-					            }//close if
+					            		}//close if
 								
 								//Otherwise, add it into the Queue
-					            BFS_Q.push(child);
+								BFS_Q.push(child);
 					       	
 							}//close if
 						  }//close if
