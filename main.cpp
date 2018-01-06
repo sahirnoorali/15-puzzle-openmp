@@ -285,7 +285,7 @@ int main() {
 									//Exit the main loop
 									flag = false;
 									
-					            		}//close if
+								}//close if
 								
 								//Otherwise, add it into the Queue
 								BFS_Q.push(child);
@@ -298,7 +298,7 @@ int main() {
 		 }//close pragma
 	}//close else
 
-	//Calculate the time taken
+    //Calculate the time taken
     double time = omp_get_wtime() - start_time;
 
     cout<<"Breath First Search Completed"<<endl;
@@ -306,6 +306,6 @@ int main() {
     cout<<"Nodes Explored: "<<nodesExplored<<endl;
     cout<<"Nodes Generated: "<<nodesGenerated<<endl;	
 	
-	return 0;
+    return 0;
 }//close main
 
